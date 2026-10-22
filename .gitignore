@@ -4,3 +4,4 @@ RAW.*
 projects/**/sources*/
 projects/**/*.db
 projects/**/*.db-journal
+*.xlsx
