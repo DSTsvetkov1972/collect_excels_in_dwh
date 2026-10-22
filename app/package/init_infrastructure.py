@@ -28,14 +28,20 @@ def get_project_info(project_name):
     project_path = projects_dict[project_name]['project_path']
     project = Path(project_path).stem
     sources_dir = os.path.join(project_path, 'sources')
+    sqlite_dir = os.path.join(project_path, 'sqlite')
     columns = projects_dict[project_name]['columns']
+    sqlite_TL_target_db = projects_dict[project_name]['sqlite_TL_target_db']
+    sqlite_TL_script = projects_dict[project_name]['sqlite_TL_script']
     convert_to_xlsx = projects_dict[project_name]['convert_to_xlsx']
 
     return {
         'project_path': project_path,
         'project': project,
         'sources_dir': sources_dir,
+        'sqlite_dir': sqlite_dir,
         'columns': columns,
+        'sqlite_TL_target_db': sqlite_TL_target_db,
+        'sqlite_TL_script': sqlite_TL_script,
         'convert_to_xlsx': convert_to_xlsx
         }
 
@@ -63,53 +69,64 @@ def ensure_project_dir(project_name):
 
 
 def ensure_storage(storage, project_name):
-    # загружаем функцию создания таблицы соответствующую типу хранилища
-    table_init_fn = storages[storage] 
+    try:
+        # загружаем функцию создания таблицы соответствующую типу хранилища
+        table_init_fn = storages[storage] 
 
-    project_info = get_project_info(project_name)
+        project_info = get_project_info(project_name)
 
-    columns = project_info['columns']
-    project = project_info['project']
+        columns = project_info['columns']
+        project = project_info['project']
 
-    table_init_fn(project, columns)
+        table_init_fn(project, columns)
+    
+        return True
+
+    except Exception as e:
+        print(Fore.RED + f'ensure_storage {repr(e)}' + Fore.RESET)
+        return False
 
 
 def ensure_progress_db(storage, project_name):
     """
-    Функция создаёт в базе данных progress_all таблицу для управления
+    Функция создаёт в базе данных таблицу prgs для управления
     загрузкой данных в DWH для соответствующего хранилища и проекта
     """
+    try:
+        project = get_project_info(project_name)['project']
+        
+        with sqlite3.connect(os.path.join(os.getcwd(), 'progress_all.db')) as conn:
+            cur = conn.cursor()
 
-    project = get_project_info(project_name)['project']
-    
-    with sqlite3.connect(os.path.join(os.getcwd(), 'progress_all.db')) as conn:
-        cur = conn.cursor()
+            sql = (f"SELECT name FROM sqlite_master "
+                f"WHERE type = 'table' AND name = 'prgs_{storage}{project}';")
 
-        sql = (f"SELECT name FROM sqlite_master "
-               f"WHERE type = 'table' AND name = 'prgs_{storage}{project}';")
+            cur = cur.execute(sql)
+            cur_res = cur.fetchone()
 
-        cur = cur.execute(sql)
-        cur_res = cur.fetchone()
+            if cur_res:
+                print(
+                    Fore.GREEN + f'Для проекта {storage} и хранилища {project} в progress_all_db существует таблица ' +
+                    Fore.RESET + f'prgs_{storage}{project}'
+                    )
+                return True
 
-        if cur_res:
-            print(
-                Fore.GREEN + f'Для проекта {storage} и хранилища {project} в progress_all_db существует таблица ' +
-                Fore.RESET + f'prgs_{storage}{project}'
-                )
-            return
+            else:
+                sql = f"""CREATE TABLE IF NOT EXISTS prgs_{storage}{project} (
+                    source TEXT PRIMARY KEY,
+                    stage TEXT);
+                    """
+                cur.execute(sql)            
 
-        sql = f"""CREATE TABLE IF NOT EXISTS prgs_{storage}{project} (
-            source TEXT PRIMARY KEY,
-            stage TEXT);
-            """
+                print(
+                    Fore.YELLOW + f'Внимание! Для проекта {storage} и хранилища {project} в progress_all_db создана таблица ' +
+                    Fore.RESET + f'prgs_{storage}{project}'
+                    )
+                return True
 
-        # print(sql)
-
-        cur.execute(sql)
-        print(
-            Fore.YELLOW + f'Внимание! Для проекта {storage} и хранилища {project} в БД progress_all создана таблица: ' +
-            Fore.RESET + f'prgs_{storage}{project}'
-            )        
+    except Exception as e:
+        print(Fore.RED + f'ensure_progress_db {repr(e)}' + Fore.RESET)
+        return False
 
 
 def infrastructure_check(project_names, storages):
@@ -122,9 +139,12 @@ def infrastructure_check(project_names, storages):
         ensure_project_dir(project_name)
 
         for storage in storages:
-            ensure_storage(storage, project_name)
-            ensure_progress_db(storage, project_name)
+            ensure_storage_res = ensure_storage(storage, project_name)
+            ensure_progress_db_res = ensure_progress_db(storage, project_name)
 
+    return (
+        ensure_storage_res and
+        ensure_progress_db_res)
 
 def get_table_fields(project):
     """

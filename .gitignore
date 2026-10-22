@@ -2,3 +2,5 @@
 __pycache__
 RAW.*
 projects/**/sources*/
+projects/**/*.db
+projects/**/*.db-journal
