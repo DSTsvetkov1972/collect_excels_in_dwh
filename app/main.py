@@ -18,7 +18,7 @@ project_names = [
     "ЦКСАП",
     "ЦКСАП_крытые_вагоны",
     "ЦКСАП_полувагоны_гружёные",
-#    "ЦКСАП_полувагоны_порожние",
+    "ЦКСАП_полувагоны_порожние",
 #    "актирования_из_1-С_РКС"
      ]
 
@@ -48,7 +48,7 @@ if __name__=='__main__':
                 # загружаем файлы, результат загрузки фиксируем в соответствующей 
                 # таблицы базы данных progress_all.db
                 for file in files_to_download:
-                    print(Fore.BLUE + file + Fore.RESET)
+                    print(Fore.BLUE + f'\n{file} ({project})' + Fore.RESET)
                     file_path = os.path.join(sources_dir, file)
                     source_name = Path(file).stem
                     source_type = Path(file).suffix

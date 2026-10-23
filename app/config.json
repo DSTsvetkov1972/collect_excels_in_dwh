@@ -64,7 +64,7 @@
             "ГрузоотправительГруппа", "Грузополучатель", "ГрузополучательГруппа", "Плательщик", "ПлательщикГруппа", "Собственник", "СобственникГруппа",
             "Арендатор", "АрендаторГруппа", "Оператор", "ОператорГруппа", "КолВоКонт", "ДФЭ", "Вес груза"
         ],
-        "sqlite_TL_script": "sqlite_TL_cksap_gruzhionye.sql",
+        "sqlite_TL_script": "sqlite_TL_cksap_poluvagony_gruzhionye.sql",
         "sqlite_TL_target_db": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\__pisarenko\\pisarenko.db",
         "convert_to_xlsx": true
      },
@@ -78,7 +78,7 @@
             "ГрузоотправительГруппа", "Грузополучатель", "ГрузополучательГруппа", "Плательщик", "ПлательщикГруппа", "Собственник", "СобственникГруппа",
             "Арендатор", "АрендаторГруппа", "Оператор", "ОператорГруппа", "КолВоКонт", "ДФЭ", "Вес груза"
         ],
-        "sqlite_TL_script": "sqlite_TL_cksap_porozhnie.sql",
+        "sqlite_TL_script": "sqlite_TL_cksap_poluvagony_porozhnie.sql",
         "sqlite_TL_target_db": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\__pisarenko\\pisarenko.db",    
         "convert_to_xlsx": true 
     },

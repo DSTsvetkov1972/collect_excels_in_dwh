@@ -71,11 +71,11 @@ CREATE INDEX `ndx__rks_directly__service_details_wagon_number` ON _rks_directly 
 COMMIT;
 
 BEGIN;
-DROP INDEX IF EXISTS `ndx_rks_directly__service_details_container_number`;
-CREATE INDEX `ndx_rks_directly__service_details_container_number` ON _rks_directly (`service_details_container_number`);
+DROP INDEX IF EXISTS `ndx__rks_directly__service_details_container_number`;
+CREATE INDEX `ndx__rks_directly__service_details_container_number` ON _rks_directly (`service_details_container_number`);
 COMMIT;
 
 BEGIN;
-DROP INDEX IF EXISTS `ndx_rks__directly_date_end`;
-CREATE INDEX `ndx_rks__directly_date_end` ON _rks_directly (`date_end`);
+DROP INDEX IF EXISTS `ndx__rks_directly__date_end`;
+CREATE INDEX `ndx__rks__directly__date_end` ON _rks_directly (`date_end`);
 COMMIT;

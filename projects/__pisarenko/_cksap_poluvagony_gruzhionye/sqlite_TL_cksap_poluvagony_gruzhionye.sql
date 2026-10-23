@@ -25,27 +25,27 @@ FROM
 COMMIT;
 
 BEGIN;
-DROP INDEX IF EXISTS "ndx__cksap__Исходник";
-CREATE INDEX "ndx__cksap__Исходник" ON _cksap_gruzhionye ("Исходник");
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_gruzhionye__Исходник";
+CREATE INDEX "ndx__cksap_poluvagony_gruzhionye__Исходник" ON _cksap_gruzhionye ("Исходник");
 COMMIT;
 
 BEGIN;
-DROP INDEX IF EXISTS "ndx__cksap__Дата отправления";
-CREATE INDEX "ndx__cksap__Дата отправления" ON _cksap_gruzhionye ("Дата отправления");
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_gruzhionye__Дата отправления";
+CREATE INDEX "ndx__cksap_poluvagony_gruzhionye__Дата отправления" ON _cksap_gruzhionye ("Дата отправления");
 COMMIT;
 
 BEGIN;
-DROP INDEX IF EXISTS "ndx__cksap__Дата прибытия";
-CREATE INDEX "ndx__cksap__Дата прибытия" ON _cksap_gruzhionye ("Дата прибытия");
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_gruzhionye__Дата прибытия";
+CREATE INDEX "ndx__cksap_poluvagony_gruzhionye__Дата прибытия" ON _cksap_gruzhionye ("Дата прибытия");
 COMMIT;
 
 BEGIN;
-DROP INDEX IF EXISTS "ndx__cksap__Номер вагона";
-CREATE INDEX "ndx__cksap__Номер вагона" ON _cksap_gruzhionye ("Номер вагона");
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_gruzhionye__Номер вагона";
+CREATE INDEX "ndx__cksap_poluvagony_gruzhionye__Номер вагона" ON _cksap_gruzhionye ("Номер вагона");
 COMMIT;
 
 BEGIN;
-DROP INDEX IF EXISTS "ndx__cksap__Дата отправления";
-CREATE INDEX "ndx__cksap__Номер контейнера" ON _cksap_gruzhionye ("Номер контейнера");
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_gruzhionye__Дата отправления";
+CREATE INDEX "ndx__cksap_poluvagony_gruzhionye__Номер контейнера" ON _cksap_gruzhionye ("Номер контейнера");
 COMMIT;
 -- SELECT "Исходник", count() FROM _cksap_gruzhionye GROUP BY "Исходник";

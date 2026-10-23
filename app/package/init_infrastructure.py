@@ -189,17 +189,19 @@ def sqlite3_table_init(project, columns):
                 Fore.GREEN + f'В DWH sqlite3 есть таблица: ' +
                 Fore.RESET + f'{project}'
                 )
-            return
- 
-        sql = (f'CREATE TABLE raw{project} \n'
-            f'({table_fields})')
         
-        pyperclip.copy(sql)
+        else:
+            sql = (
+                f'CREATE TABLE raw{project} \n'
+                f'({table_fields})'
+                )
+            cur.execute(sql)
 
-        cur.execute(sql)
-
-        print(Fore.YELLOW + 'Внимание! В DWH sqlite3 создана таблица: ' + 
-              Fore.RESET + project)
+            sql = (
+                f'CREATE INDEX "ndx__raw{project}__Исходник" ON raw{project} ("Исходник");'
+            )    
+            print(Fore.YELLOW + 'Внимание! В DWH sqlite3 создана таблица: ' + 
+                Fore.RESET + project)
 
 
 def click_table_init(project, columns):
