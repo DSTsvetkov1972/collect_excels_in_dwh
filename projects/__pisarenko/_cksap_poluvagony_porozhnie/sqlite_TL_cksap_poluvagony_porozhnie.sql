@@ -1,0 +1,51 @@
+--======================================================================
+-- Запускается в той базе, в которой нужно создать таблицу cksap
+--======================================================================
+
+------------------------------------------------------------------------
+
+ATTACH 'E:\.PROJECTS\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\RAW.db' AS raw;
+
+------------------------------------------------------------------------
+
+--PRAGMA cache_size = -64000;
+--PRAGMA temp_store = MEMORY;	
+
+BEGIN;
+DROP TABLE IF EXISTS _cksap_poluvagony_porozhnie;
+CREATE TABLE _cksap_poluvagony_porozhnie AS 
+SELECT
+	Исходник,"Строка в исходнике",
+	"Дата отправления","Дата прибытия",
+	"Номер вагона","Номер контейнера","Номер накладной",
+	Футовость,"Вид спецконтейнера","Груж-пор","Государство отправления","Государство назначения","Код станции отправления РФ","Название станции отправления РФ","Код станции назначения РФ","Название станции назначения РФ","Код станции отправления СНГ","Код станции назначения СНГ","Дорога отпр","Дорога наз","Вид перевозки","Код Груза ЕТСНГ","Название Груза ЕТСНГ","Группа груза","Код груза ГНГ",Грузоотправитель,ГрузоотправительГруппа,Грузополучатель,ГрузополучательГруппа,Плательщик,ПлательщикГруппа,Собственник,СобственникГруппа,Арендатор,АрендаторГруппа,Оператор,ОператорГруппа,КолВоКонт,ДФЭ,"Вес груза"
+FROM
+	raw.raw_cksap_poluvagony_porozhnie;
+COMMIT;	
+
+BEGIN;
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_porozhnie__Исходник";
+CREATE INDEX "ndx__cksap_poluvagony_porozhnie__Исходник" ON _cksap_poluvagony_porozhnie ("Исходник");
+COMMIT;
+
+BEGIN;
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_porozhnie__Дата отправления";
+CREATE INDEX "ndx__cksap_poluvagony_porozhnie__Дата отправления" ON _cksap_poluvagony_porozhnie ("Дата отправления");
+COMMIT;
+
+BEGIN;
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_porozhnie__Дата прибытия";
+CREATE INDEX "ndx__cksap_poluvagony_porozhnie__Дата прибытия" ON _cksap_poluvagony_porozhnie ("Дата прибытия");
+COMMIT;
+
+BEGIN;
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_porozhnie__Номер вагона";
+CREATE INDEX "ndx__cksap_poluvagony_porozhnie__Номер вагона" ON _cksap_poluvagony_porozhnie ("Номер вагона");
+COMMIT;
+
+BEGIN;
+DROP INDEX IF EXISTS "ndx__cksap_poluvagony_porozhnie__Дата отправления";
+CREATE INDEX "ndx__cksap_poluvagony_porozhnie__Номер контейнера" ON _cksap_poluvagony_porozhnie ("Номер контейнера");
+COMMIT;
+
+-- SELECT "Исходник", count() FROM _cksap_porozhnie GROUP BY "Исходник";

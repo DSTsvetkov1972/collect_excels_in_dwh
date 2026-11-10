@@ -1,0 +1,152 @@
+{
+    "заказы": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\_orders",
+        "columns": [
+            "Unnamed: 0", "order_id", "source_system", "source_id", "trans_subcode", "state", "comment_for_processing", 
+            "equipment_from_region", "equipment_from_warehouse", "equipment_to_region", "equipment_to_warehouse", "tsol_id", 
+            "tsol_itinerary_id", "tsol_sort_priority", "tsol_items_total_weight", "tsol_items_declared_cost", "tsol_items_declared_currency", 
+            "tsol_period_total_days", "tsol_period_start_date", "tsol_period_planning", "tsol_period_end_date", "tsol_location_total_distance", 
+            "tsol_location_from_country_id", "tsol_location_from_station_id", "tsol_location_from_catalog_id", "tsol_location_from_kladr_id", 
+            "tsol_location_from_fias_id", "tsol_location_from_city", "tsol_location_via_country_id", "tsol_location_via_station_id", 
+            "tsol_location_via_catalog_id", "tsol_location_via_kladr_id", "tsol_location_via_fias_id", "tsol_location_via_city", 
+            "tsol_location_to_country_id", "tsol_location_to_station_id", "tsol_location_to_catalog_id", "tsol_location_to_kladr_id", 
+            "tsol_location_to_fias_id", "tsol_location_to_city", "tsol_user_type_id", "tsol_client_type", "tsol_sort_routes_by", 
+            "tsol_container_owner", "tsol_car_owner", "tsol_sales_channel_id","tsol_rail_tariff_only", "tsol_empty_equipment", 
+            "tsol_complex_service", "tsol_shipment_type_id", "tsol_complete_car_shipment", "tsol_shipment_detail_id", "tsol_route_mode_id", 
+            "tsol_household_exceeds", "tsol_container_train", "tsol_currency", "tsol_linked_cargo", "tsol_oversize_index", "tsol_cars_linked", 
+            "tsol_cars_group", "tsol_cars_in_route", "tsol_cars_count_in_group", "tsol_military_form2_rail", "tsol_military_form2_terminal", 
+            "tsol_military_form2_water", "tsol_equipment_types_together", "comment", "agree_for_new_equipment", "package_name", "related_order_id", 
+            "counter_offer_apply", "need_resources_book", "client_id", "client_name", "client_user_name", "manager_id", "manager_name", "contract_id", 
+            "contract_number", "contract_date", "contract_branch_id", "contract_branch_name", "contract_branch_sub_code", "contract_language", 
+            "guard_contract_id", "guard_contract_number", "guard_contract_client_owns", "shipment_doc_type_id", "shipment_doc_number", "shipment_doc_date", 
+            "shipment_doc_responsible_name", "shipment_doc_responsible_post", "special_contract_number", "special_contract_date", "order_data", 
+            "message_id", "fact_period_start_date", "fact_period_end_date", "fact_period_total_days", "created", "rks_act_date", 
+            "tsol_location_from_1520_station_id", "tsol_location_to_1520_station_id", "is_sea", "is_rw", "is_auto", "receipt_doctype_id", 
+            "need_custom", "epd_orexp_paper", "single_forwarding_order", "client_edo_id"],
+        "if_excel_source_header": 0        
+    },
+    "выдачи и сдачи": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\_gate_in_gate_out_i_trans",
+        "columns": [
+            "Отменено", "Дата отмены", "Тип релиза", "№ релиза", "№ заказа", "Тип перемещения", "Номер контейнера",
+            "Тип контейнера", "Требует ремонта", "Состояние контейнера", "Страна", "Регион", "Депо", "Порожний",
+            "Страна назначения", "Пункт назначения", "Погран. переход", "Фактическая дата отправки по релизу",
+            "Клиент", "Менеджер заказа", "Период действия релиза", "Дата ввода данных", "Источник",
+            "Тип заказа операции", "Автор события", "Автор отмены", "Дата завоза в депо", "Время простоя"],
+        "if_excel_source_header": 0
+    },
+    "релизы": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\_releases",
+        "columns": [
+            "Редактирование релиза", "GATE OUT", "Статус", "№ релиза", "№ заказа", "Место выдачи", "Менеджер заказа",
+            "Депо выдачи", "Дата создания", "Период действия релиза", "Тип контейнера", "Согласовано", "Выдано", "Остаток",
+            "Клиент", "Страна назначения", "Погран переход", "Пункт назначения", "Комментарий", "Дата оплаты",
+            "Согласован новый", "Ответственный букировщик", "Комментарий букировщика", "Количество отменено"],
+        "if_excel_source_header": 0
+    },    
+    "контейнеры_открытая_аренда": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\__leased_containers\\_leased_containers_open_lease",
+        "columns": [
+            "Номер контейнера", "Собственник привлеченного контейнера", "Заявка", "Дата начала аренды",
+            "Собственник привлеченного контейнера.1", "Дата окончания аренды (факт)","Текущий срок пользования",
+            "Статус аренды", "Тип размера", "Собственник", "Текущий сверхнормативный срок пользования",
+            "Тип аренды", "Нормативный срок пользования", "Дата окончания аренды (план)", "Текущие ограничения",
+            "Номер Заказа", "Станция отправления", "Номер слота", "Станция назначения", "Станция дислокации",
+            "Менджер заказа", "Регионы привлечения", "Регионы сдачи", "Последняя операция с контейнером", "Дата последней операции"
+        ],
+        "if_excel_source_header": 0
+    },
+    "контейнеры_закрытая_аренда": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\__leased_containers\\_leased_containers_closed_lease",
+        "columns": [
+            "Номер контейнера", "Заявка", "Дата начала аренды", "Собственник привлечённого контейнера",
+            "Дата окончания аренды (факт)", "Текущий срок пользования", "Тип размера", "Собственник",
+            "Тип аренды", "Текущие ограничения", "Регионы привлечения"
+        ],
+        "if_excel_source_header": 0
+    },
+    "ЦКСАП" : {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\__pisarenko\\_cksap_fitingi",
+        "columns": [
+            "Дата отправления", "Дата прибытия", "Номер вагона", "Номер контейнера","Номер накладной", "Футовость", "Вид спецконтейнера",
+            "Груж-пор", "Государство отправления", "Государство назначения", "Код станции отправления РФ", "Название станции отправления РФ",
+            "Код станции назначения РФ", "Название станции назначения РФ", "Код станции отправления СНГ", "Код станции назначения СНГ", "Дорога отпр",
+            "Дорога наз", "Вид перевозки", "Код Груза ЕТСНГ", "Название Груза ЕТСНГ", "Группа груза", "Код груза ГНГ", "Грузоотправитель",
+            "ГрузоотправительГруппа", "Грузополучатель", "ГрузополучательГруппа", "Плательщик", "ПлательщикГруппа", "Собственник", "СобственникГруппа",
+            "Арендатор", "АрендаторГруппа", "Оператор", "ОператорГруппа", "КолВоКонт", "ДФЭ", "Вес груза"
+        ],
+        "convert_to_xlsx": true,
+        "if_csv_source_header": null,
+        "if_csv_sep": ";",
+        "if_excel_source_header": 0
+     },
+    "ЦКСАП_крытые_вагоны": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\__pisarenko\\_cksap_krytye",
+        "columns": [
+            "Дата отправления", "Дата прибытия", "Номер вагона", "Номер контейнера","Номер накладной", "Футовость", "Родвагона", "Вид спецконтейнера",
+            "Груж-пор", "Государство отправления", "Государство назначения", "Код станции отправления РФ", "Название станции отправления РФ",
+            "Код станции назначения РФ", "Название станции назначения РФ", "Код станции отправления СНГ", "Код станции назначения СНГ", "Дорога отпр",
+            "Дорога наз", "Вид перевозки", "Код Груза ЕТСНГ", "Название Груза ЕТСНГ", "Группа груза", "Код груза ГНГ", "Грузоотправитель",
+            "ГрузоотправительГруппа", "Грузополучатель", "ГрузополучательГруппа", "Плательщик", "ПлательщикГруппа", "Собственник", "СобственникГруппа",
+            "Арендатор", "АрендаторГруппа", "Оператор", "ОператорГруппа", "КолВоКонт", "ДФЭ", "Вес груза"
+        ],
+        "convert_to_xlsx": true,
+        "if_csv_source_header": null,
+        "if_csv_sep": ";",        
+        "if_excel_source_header": 0
+     },
+    "ЦКСАП_полувагоны_гружёные": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\__pisarenko\\_cksap_poluvagony_gruzhionye",
+        "columns": [
+            "Дата отправления", "Дата прибытия", "Номер вагона", "Номер контейнера","Номер накладной", "Футовость", "Родвагона", "Вид спецконтейнера",
+            "Груж-пор", "Государство отправления", "Государство назначения", "Код станции отправления РФ", "Название станции отправления РФ",
+            "Код станции назначения РФ", "Название станции назначения РФ", "Код станции отправления СНГ", "Код станции назначения СНГ", "Дорога отпр",
+            "Дорога наз", "Вид перевозки", "Код Груза ЕТСНГ", "Название Груза ЕТСНГ", "Группа груза", "Код груза ГНГ", "Грузоотправитель",
+            "ГрузоотправительГруппа", "Грузополучатель", "ГрузополучательГруппа", "Плательщик", "ПлательщикГруппа", "Собственник", "СобственникГруппа",
+            "Арендатор", "АрендаторГруппа", "Оператор", "ОператорГруппа", "КолВоКонт", "ДФЭ", "Вес груза"
+        ],
+        "convert_to_xlsx": true,
+        "if_csv_source_header": null,
+        "if_csv_sep": ";",        
+        "if_excel_source_header": 0           
+     },
+    "ЦКСАП_полувагоны_порожние": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\__pisarenko\\_cksap_poluvagony_porozhnie",
+        "columns": [
+            "Дата отправления", "Дата прибытия", "Номер вагона", "Номер контейнера","Номер накладной", "Футовость", "Родвагона", "Вид спецконтейнера",
+            "Груж-пор", "Государство отправления", "Государство назначения", "Код станции отправления РФ", "Название станции отправления РФ",
+            "Код станции назначения РФ", "Название станции назначения РФ", "Код станции отправления СНГ", "Код станции назначения СНГ", "Дорога отпр",
+            "Дорога наз", "Вид перевозки", "Код Груза ЕТСНГ", "Название Груза ЕТСНГ", "Группа груза", "Код груза ГНГ", "Грузоотправитель",
+            "ГрузоотправительГруппа", "Грузополучатель", "ГрузополучательГруппа", "Плательщик", "ПлательщикГруппа", "Собственник", "СобственникГруппа",
+            "Арендатор", "АрендаторГруппа", "Оператор", "ОператорГруппа", "КолВоКонт", "ДФЭ", "Вес груза"
+        ],
+        "convert_to_xlsx": true,
+        "if_csv_source_header": null,
+        "if_csv_sep": ";",        
+        "if_excel_source_header": 0
+    },
+    "актирования_из_1-С_РКС": {
+        "project_path": "E:\\.PROJECTS\\СОБИРАЕМ Excels В ТАБЛИЦУ DWH\\projects\\_rks_directly",
+        "columns": [
+            "document_id", "row_id", "row_total", "document_number", "client_number_id", "contract_id", "contract_number",
+            "contract_organization", "service_details_acted_date", "service_details_provision_date", "service_details_order_id",
+            "service_details_points_from_catalog_id", "service_details_points_from_station_id", "service_details_points_to_catalog_id",
+            "service_details_points_to_station_id", "service_details_container_number", "service_details_container_type", "service_details_container_owner",
+            "service_details_wagon_number", "service_details_wagon_owner", "items_etsng_id", "items_gng_id", "items_weight", "date_end",
+            "epu_id", "esu_id", "class_id", "provider_contract_id", "order_manager", "wagon_container", "amount_in_contract_currency_with_vat",
+            "amount_in_contract_currency_vat", "amount_in_contract_currency_without_vat", "amount_in_contract_currency_buy", "amount_in_rub_with_vat",
+            "amount_in_rub_vat", "amount_in_rub_without_vat", "amount_in_rub_buy", "amount_in_rub_adjusted_revenue", "additional_route_mode_id",
+            "departure_date", "shipment_date", "document_reasons_name", "document_reasons_number", "departure_kind", "route_legs_type",
+            "service_provision_place_filial_name", "service_provision_place_filial_id", "service_provision_place_division_name",
+            "service_provision_place_division_id", "service_provision_place_location_name", "service_provision_place_location_external_id",
+            "account_item", "account_item_code", "sub_code", "tariff_epu", "esu_payer_name", "esu_payer_id", "epu_payer_name", "epu_payer_id",
+            "is_coexecutor_wagon", "is_agency_wagon", "wagon_owner_name", "wagon_owner_id", "container_owner_name", "container_owner_id",
+            "transport_solution_country_from_id", "transport_solution_country_to_id", "transport_solution_location_in_name",
+            "transport_solution_location_in_id", "transport_solution_location_out_name", "transport_solution_location_out_id",
+            "transport_solution_total_distance", "_ЗаписьУдалена"
+        ],
+        "convert_to_xlsx": false,
+        "if_csv_source_header": 0,
+        "if_csv_sep": ";"
+    }
+}

@@ -1,0 +1,705 @@
+{
+    "order": {
+        "id": 32442329,
+        "client": {
+            "id": "0008219796",
+            "name": "ООО \"ТИС ЛОДЖИСТИК\"",
+            "user_name": "050402@tislogistic.ru"
+        },
+        "source": {
+            "id": 2993897,
+            "system": "isales3"
+        },
+        "comment": null,
+        "manager": {
+            "id": "nenashevaav@trcont.ru",
+            "name": "Ненашева Алина",
+            "type": "manager"
+        },
+        "related": {
+            "type": "",
+            "order_id": ""
+        },
+        "add_info": {
+            "id": "2993897",
+            "comment": null,
+            "package": {
+                "name": "Без упаковки"
+            },
+            "equipment": [
+                {
+                    "cargo": null,
+                    "sequence": 1,
+                    "wagon_number": null,
+                    "container_number": null
+                }
+            ],
+            "organizations": [
+                {
+                    "id": "0000000974",
+                    "name": "ООО \"ТИС ЛОДЖИСТИК\"",
+                    "okpo": "11525496",
+                    "tgnl": null,
+                    "type": "shipper",
+                    "leg_id": 2,
+                    "address": {
+                        "str": "107113, Москва г, вн.тер.г.муниципальный округ Сокольники, ул. Маленковская, д. 32, стр. 3, помещ. 1/1",
+                        "city": null,
+                        "fias_id": null,
+                        "kladr_id": null
+                    },
+                    "comment": null,
+                    "contacts": [
+                        {
+                            "name": null,
+                            "email": null,
+                            "phone_number": null
+                        }
+                    ],
+                    "transport_mode": "RAIL",
+                    "optional_full_name": "ООО \"ТИС ЛОДЖИСТИК\", 2543143277, 11525496"
+                },
+                {
+                    "id": "0000022101",
+                    "name": "ООО \"Т1\"",
+                    "okpo": "29381833",
+                    "tgnl": "7089",
+                    "type": "consignee",
+                    "leg_id": 2,
+                    "address": {
+                        "str": "Москва, Коровий Вал, - 7,стр.7 - оф.150",
+                        "city": null,
+                        "fias_id": null,
+                        "kladr_id": null
+                    },
+                    "comment": null,
+                    "contacts": [
+                        {
+                            "name": null,
+                            "email": null,
+                            "phone_number": null
+                        }
+                    ],
+                    "transport_mode": "RAIL",
+                    "optional_full_name": "ООО \"Т1\", 9705058824, 29381833"
+                }
+            ],
+            "delivery_address": [
+                {
+                    "type": "from",
+                    "leg_id": 1,
+                    "address": {
+                        "str": "Хабаровск 2, терминал ТК, Хабаровск, РОССИЯ",
+                        "latitude": null,
+                        "longitude": null
+                    }
+                },
+                {
+                    "type": "to",
+                    "leg_id": 3,
+                    "address": {
+                        "str": "Купавна, терминал ООО \"Контейнерный терминал Купавна\", Москва, РОССИЯ",
+                        "latitude": null,
+                        "longitude": null
+                    }
+                }
+            ],
+            "agree_for_new_equipment": false,
+            "container_initiator_comment": null
+        },
+        "contract": {
+            "id": "000001715566",
+            "date": "2021-02-25",
+            "branch": {
+                "id": "2.0.00154",
+                "name": "Дальневосточный филиал ПАО \"ТрансКонтейнер\"",
+                "sub_code": "96"
+            },
+            "number": "НКП ДВЖД-931651"
+        },
+        "sub_code": "960324423294",
+        "guard_contract": {
+            "number": null,
+            "client_owns": false
+        },
+        "datetime_created": "2024-12-26T08:38:32+00:00",
+        "equipment_delivery": {
+            "from": {
+                "region": null,
+                "warehouse": []
+            }
+        },
+        "transport_solution": {
+            "id": "cc650f7a-ba46-44d6-9070-1f8ace192ab8",
+            "legs": [
+                {
+                    "id": 1,
+                    "flag": {
+                        "additional_auto": false,
+                        "incomplete_service": false
+                    },
+                    "period": {
+                        "date_end": {
+                            "date": "2025-01-02T16:00:00+10:00"
+                        },
+                        "date_start": {
+                            "date": "2025-01-02T10:00:00+10:00"
+                        },
+                        "total_days": 1
+                    },
+                    "points": {
+                        "to": {
+                            "border": false,
+                            "catalog_id": "T_RU_KHA_TK",
+                            "station_id": null
+                        },
+                        "from": {
+                            "border": false,
+                            "address": {},
+                            "catalog_id": "W_RU_KHA",
+                            "country_id": "643",
+                            "station_id": null
+                        },
+                        "total_distance": 0
+                    },
+                    "services": [
+                        {
+                            "id": 2,
+                            "type": "base",
+                            "units": 1,
+                            "epu_id": "1.02.04",
+                            "details": [
+                                {
+                                    "id": 2,
+                                    "type": "base",
+                                    "units": 1,
+                                    "amount": 1956.0,
+                                    "esu_id": "0.03.01.11",
+                                    "measure": {
+                                        "catalog_id": "000000002"
+                                    },
+                                    "currency": "RUB",
+                                    "branch_id": "1.1.00000",
+                                    "amount_buy": 1956.0,
+                                    "rail_guard": false,
+                                    "cost_per_unit": 1956.0,
+                                    "additional_fee": false,
+                                    "can_be_excluded": false,
+                                    "cost_per_unit_buy": 1956.0,
+                                    "new_algorithm_fz_92": false,
+                                    "currency_coefficient": 1,
+                                    "provider_contract_id": null,
+                                    "amount_in_contract_currency": 1956.0,
+                                    "amount_buy_in_contract_currency": 1956.0,
+                                    "cost_per_unit_in_contract_currency": 1956.0,
+                                    "cost_per_unit_in_contract_currency_buy": 1956.0
+                                },
+                                {
+                                    "id": 3,
+                                    "type": "base",
+                                    "units": 1,
+                                    "amount": 4502.0,
+                                    "esu_id": "0.02.01.13.02",
+                                    "measure": {
+                                        "catalog_id": "000000002"
+                                    },
+                                    "currency": "RUB",
+                                    "branch_id": "1.1.00000",
+                                    "amount_buy": 4502.0,
+                                    "rail_guard": false,
+                                    "cost_per_unit": 4502.0,
+                                    "additional_fee": false,
+                                    "can_be_excluded": false,
+                                    "cost_per_unit_buy": 4502.0,
+                                    "new_algorithm_fz_92": false,
+                                    "currency_coefficient": 1,
+                                    "provider_contract_id": "000000017637",
+                                    "amount_in_contract_currency": 4502.0,
+                                    "amount_buy_in_contract_currency": 4502.0,
+                                    "cost_per_unit_in_contract_currency": 4502.0,
+                                    "cost_per_unit_in_contract_currency_buy": 4502.0
+                                },
+                                {
+                                    "id": 4,
+                                    "type": "base",
+                                    "units": 1,
+                                    "amount": 5994.0,
+                                    "esu_id": "0.02.01.13.02",
+                                    "measure": {
+                                        "catalog_id": "000000002"
+                                    },
+                                    "currency": "RUB",
+                                    "branch_id": "1.1.00000",
+                                    "amount_buy": 5994.0,
+                                    "rail_guard": false,
+                                    "cost_per_unit": 5994.0,
+                                    "additional_fee": false,
+                                    "can_be_excluded": false,
+                                    "cost_per_unit_buy": 5994.0,
+                                    "new_algorithm_fz_92": false,
+                                    "currency_coefficient": 1,
+                                    "provider_contract_id": "000000017637",
+                                    "amount_in_contract_currency": 5994.0,
+                                    "amount_buy_in_contract_currency": 5994.0,
+                                    "cost_per_unit_in_contract_currency": 5994.0,
+                                    "cost_per_unit_in_contract_currency_buy": 5994.0
+                                }
+                            ],
+                            "measure": {
+                                "catalog_id": "000000002"
+                            },
+                            "currency": "RUB",
+                            "included": true,
+                            "amount_vat": 2490.4,
+                            "description": [
+                                {
+                                    "id": "000000438",
+                                    "type": "commercial_term"
+                                },
+                                {
+                                    "id": "000000446",
+                                    "type": "commercial_term"
+                                },
+                                {
+                                    "id": "000000445",
+                                    "type": "commercial_term"
+                                }
+                            ],
+                            "vat_applied": true,
+                            "vat_percent": 20,
+                            "count_multiply": false,
+                            "amount_with_vat": 14942.4,
+                            "can_be_excluded": false,
+                            "can_be_countable": false,
+                            "amount_without_vat": 12452.0,
+                            "special_service_id": null,
+                            "is_accessorial_code": false,
+                            "price_per_unit_with_vat": 14942.4,
+                            "special_service_duration": null,
+                            "price_per_unit_without_vat": 12452.0
+                        }
+                    ],
+                    "rate_geo_id": "I_SELL_OG40_00300513",
+                    "complex_1520": false,
+                    "transport_mode": "INTRMDL",
+                    "total_amount_included": 14942.4
+                },
+                {
+                    "id": 2,
+                    "flag": {
+                        "additional_auto": false,
+                        "incomplete_service": false
+                    },
+                    "period": {
+                        "date_end": {
+                            "date": "2025-01-29T12:07:05+03:00"
+                        },
+                        "date_start": {
+                            "date": "2025-01-02T16:00:00+10:00"
+                        },
+                        "total_days": 28
+                    },
+                    "points": {
+                        "to": {
+                            "border": false,
+                            "catalog_id": "T_RU_KPV_KTK",
+                            "station_id": "230506"
+                        },
+                        "from": {
+                            "border": false,
+                            "catalog_id": "T_RU_KHA_TK",
+                            "station_id": "970001"
+                        },
+                        "total_distance": 8383.0
+                    },
+                    "services": [
+                        {
+                            "id": 29,
+                            "type": "base",
+                            "units": 1,
+                            "epu_id": "1.02.01",
+                            "details": [
+                                {
+                                    "id": 33,
+                                    "type": "base",
+                                    "units": 1,
+                                    "amount": 210000.0,
+                                    "esu_id": "0.01.01.01",
+                                    "measure": {
+                                        "catalog_id": "000000002"
+                                    },
+                                    "currency": "RUB",
+                                    "branch_id": "1.1.00000",
+                                    "amount_buy": 210000.0,
+                                    "rail_guard": false,
+                                    "cost_per_unit": 210000.0,
+                                    "additional_fee": false,
+                                    "can_be_excluded": false,
+                                    "cost_per_unit_buy": 210000.0,
+                                    "new_algorithm_fz_92": true,
+                                    "currency_coefficient": 1,
+                                    "provider_contract_id": null,
+                                    "amount_in_contract_currency": 210000.0,
+                                    "amount_buy_in_contract_currency": 210000.0,
+                                    "cost_per_unit_in_contract_currency": 210000.0,
+                                    "cost_per_unit_in_contract_currency_buy": 210000.0
+                                }
+                            ],
+                            "measure": {
+                                "catalog_id": "000000002"
+                            },
+                            "currency": "RUB",
+                            "included": true,
+                            "amount_vat": 42000.0,
+                            "description": [
+                                {
+                                    "id": "000000138",
+                                    "type": "commercial_term"
+                                }
+                            ],
+                            "vat_applied": true,
+                            "vat_percent": 20,
+                            "count_multiply": false,
+                            "amount_with_vat": 252000.0,
+                            "can_be_excluded": false,
+                            "can_be_countable": false,
+                            "amount_without_vat": 210000.0,
+                            "special_service_id": null,
+                            "is_accessorial_code": false,
+                            "price_per_unit_with_vat": 252000.0,
+                            "special_service_duration": null,
+                            "price_per_unit_without_vat": 210000.0
+                        },
+                        {
+                            "id": 30,
+                            "type": "additional",
+                            "units": 1,
+                            "epu_id": "1.02.01",
+                            "details": [
+                                {
+                                    "id": 34,
+                                    "type": "additional",
+                                    "units": 1,
+                                    "amount": 155754.0,
+                                    "esu_id": "0.02.01.01",
+                                    "measure": {
+                                        "catalog_id": "000000002"
+                                    },
+                                    "currency": "RUB",
+                                    "branch_id": null,
+                                    "amount_buy": 155754.0,
+                                    "rail_guard": false,
+                                    "cost_per_unit": 155754.0,
+                                    "additional_fee": false,
+                                    "can_be_excluded": true,
+                                    "cost_per_unit_buy": 155754.0,
+                                    "new_algorithm_fz_92": false,
+                                    "currency_coefficient": 1,
+                                    "provider_contract_id": "000000017637",
+                                    "amount_in_contract_currency": 155754.0,
+                                    "amount_buy_in_contract_currency": 155754.0,
+                                    "cost_per_unit_in_contract_currency": 155754.0,
+                                    "cost_per_unit_in_contract_currency_buy": 155754.0
+                                }
+                            ],
+                            "measure": {
+                                "catalog_id": "000000002"
+                            },
+                            "currency": "RUB",
+                            "included": true,
+                            "amount_vat": 31150.8,
+                            "description": [
+                                {
+                                    "id": "000000472",
+                                    "type": "commercial_term"
+                                }
+                            ],
+                            "vat_applied": true,
+                            "vat_percent": 20,
+                            "count_multiply": false,
+                            "amount_with_vat": 186904.8,
+                            "can_be_excluded": true,
+                            "can_be_countable": false,
+                            "amount_without_vat": 155754.0,
+                            "special_service_id": "TRCONT.ТАРИФ_РОССИЯ",
+                            "is_accessorial_code": false,
+                            "price_per_unit_with_vat": 186904.8,
+                            "special_service_duration": null,
+                            "price_per_unit_without_vat": 155754.0
+                        }
+                    ],
+                    "rate_geo_id": "R_A40-0010009663-10070419",
+                    "complex_1520": false,
+                    "transport_mode": "RAIL",
+                    "total_amount_included": 438904.8
+                },
+                {
+                    "id": 3,
+                    "flag": {
+                        "additional_auto": false,
+                        "incomplete_service": false
+                    },
+                    "period": {
+                        "date_end": {
+                            "date": "2025-01-29T14:07:05+03:00"
+                        },
+                        "date_start": {
+                            "date": "2025-01-29T12:07:05+03:00"
+                        },
+                        "total_days": 1
+                    },
+                    "points": {
+                        "to": {
+                            "border": false,
+                            "address": {},
+                            "catalog_id": "W_RU_KPV",
+                            "country_id": "643",
+                            "station_id": null
+                        },
+                        "from": {
+                            "border": false,
+                            "catalog_id": "T_RU_KPV_KTK",
+                            "station_id": null
+                        },
+                        "total_distance": 0
+                    },
+                    "services": [
+                        {
+                            "id": 35,
+                            "type": "additional",
+                            "units": 2,
+                            "epu_id": "2.02.01",
+                            "details": [
+                                {
+                                    "id": 43,
+                                    "type": "additional",
+                                    "units": 2,
+                                    "amount": 4722.0,
+                                    "esu_id": "0.02.01.13.03",
+                                    "measure": {
+                                        "catalog_id": "000000006"
+                                    },
+                                    "currency": "RUB",
+                                    "branch_id": "2.0.00141",
+                                    "amount_buy": 4722.0,
+                                    "rail_guard": false,
+                                    "cost_per_unit": 2361.0,
+                                    "additional_fee": false,
+                                    "can_be_excluded": true,
+                                    "cost_per_unit_buy": 2361.0,
+                                    "new_algorithm_fz_92": false,
+                                    "currency_coefficient": 1,
+                                    "provider_contract_id": "000003019123",
+                                    "amount_in_contract_currency": 4722.0,
+                                    "amount_buy_in_contract_currency": 4722.0,
+                                    "cost_per_unit_in_contract_currency": 2361.0,
+                                    "cost_per_unit_in_contract_currency_buy": 2361.0
+                                }
+                            ],
+                            "measure": {
+                                "catalog_id": "000000006"
+                            },
+                            "currency": "RUB",
+                            "included": true,
+                            "amount_vat": 944.4,
+                            "description": [
+                                {
+                                    "id": "000000006",
+                                    "type": "commercial_term"
+                                }
+                            ],
+                            "vat_applied": true,
+                            "vat_percent": 20,
+                            "count_multiply": false,
+                            "amount_with_vat": 5666.4,
+                            "can_be_excluded": true,
+                            "can_be_countable": true,
+                            "amount_without_vat": 4722.0,
+                            "special_service_id": "TRCONT.2_02_01-PRB-ПОРОЖНИЙ_КОНТЕЙНЕР",
+                            "is_accessorial_code": false,
+                            "price_per_unit_with_vat": 2833.2,
+                            "special_service_duration": 86400,
+                            "price_per_unit_without_vat": 2361.0
+                        }
+                    ],
+                    "rate_geo_id": "I_SELL_PG40_00800584",
+                    "complex_1520": false,
+                    "transport_mode": "INTRMDL",
+                    "total_amount_included": 5666.4
+                }
+            ],
+            "flags": {
+                "release": null,
+                "services": {
+                    "rail_cn": "NO",
+                    "vessel_co": "NO"
+                }
+            },
+            "items": [
+                {
+                    "gng_id": "00000000",
+                    "weight": 20.0,
+                    "etsng_id": "583046"
+                }
+            ],
+            "amount": 459513.6,
+            "client": {
+                "id": "0008219796"
+            },
+            "period": {
+                "date_end": {
+                    "date": "2025-01-29T14:07:05+03:00"
+                },
+                "date_start": {
+                    "date": "2025-01-02T10:00:00+10:00",
+                    "date_for_planning": "2025-01-02T00:00:00+03:00"
+                },
+                "total_days": 28
+            },
+            "wagons": [],
+            "contract": {
+                "id": "000001715566",
+                "type": "standart",
+                "branch": {
+                    "id": "2.0.00154",
+                    "name": "Филиал ПАО \"ТрансКонтейнер\" на Дальневосточной железной дороге"
+                },
+                "number": "НКП ДВЖД-931651",
+                "language": null,
+                "date_expiration": "2025-12-31"
+            },
+            "location": {
+                "to": {
+                    "catalog_id": "W_RU_KPV",
+                    "country_id": "643",
+                    "station_id": "230506"
+                },
+                "via": null,
+                "from": {
+                    "catalog_id": "W_RU_KHA",
+                    "country_id": "643",
+                    "station_id": "970001"
+                },
+                "in_1520": {
+                    "catalog_id": null,
+                    "station_id": null
+                },
+                "out_1520": {
+                    "catalog_id": null,
+                    "station_id": null
+                },
+                "in_russia": {
+                    "catalog_id": null,
+                    "station_id": null
+                },
+                "out_russia": {
+                    "catalog_id": null,
+                    "station_id": null
+                },
+                "total_distance": 8383.0
+            },
+            "services": null,
+            "additional": {
+                "currency": "RUB",
+                "client_type": "standart",
+                "wagon_owner": "TK",
+                "linked_cargo": null,
+                "user_type_id": [
+                    1
+                ],
+                "wagons_group": false,
+                "route_mode_id": 1,
+                "wagons_linked": false,
+                "oversize_index": null,
+                "sort_routes_by": "price",
+                "complex_service": true,
+                "conductor_count": null,
+                "container_owner": "TK",
+                "empty_equipment": false,
+                "wagons_in_route": false,
+                "rail_tariff_only": false,
+                "sales_channel_id": 1,
+                "shipment_type_id": 3000,
+                "household_exceeds": null,
+                "shipment_detail_id": 6,
+                "military_form2_rail": false,
+                "for_continuous_route": false,
+                "military_form2_water": false,
+                "wagons_count_in_group": [],
+                "complete_shipment_wagon": false,
+                "eq_count_in_guard_group": null,
+                "military_form2_terminal": false,
+                "equipment_types_together": false,
+                "shipment_support_type_id": null,
+                "included_in_container_train": false
+            },
+            "containers": [
+                {
+                    "type": "DRV_40FT_30T_HC",
+                    "count": 1,
+                    "weight_brutto": 24.1
+                }
+            ],
+            "product_id": null,
+            "expiry_date": "2025-02-09T11:37:33.348200+03:00",
+            "information": [],
+            "system_from": "calculator",
+            "itinerary_id": "TRCONT.AW_RU_KHA-KHA_TK-KPV_KTK-AW_RU_KPV_3LEG",
+            "sort_priority": 3,
+            "special_rates": [
+                {
+                    "id": "20241212-173-6-0-01-0103",
+                    "date": {
+                        "end": "2025-04-01 00:00:00",
+                        "start": "2025-01-02 00:00:00"
+                    },
+                    "currency": "RUB",
+                    "documents": "http://172.16.22.193/docstore/B98F65CE-03C7-4A82-A757-177ABC465570.zip",
+                    "description": "Ставка дейстаительна при условии организации перевозок одиночной и/или комплектной отправкой, а также в составе контейнерного поезда. В ставку включен согласованный срок предоставления 20/40-футовых контейнеров Экспедитора под дополнительные операции в размере 5 суток без начисления платы за пользование контейнером Компании с момента обеспеченной перевозчиком выгрузки на станцию Купавна МСК ж.д./КО/груженый контейнер",
+                    "primary_cost": 395710.0,
+                    "cost_per_unit": 210000.0
+                }
+            ],
+            "complex_services": [
+                {
+                    "id": 1,
+                    "units": 1,
+                    "epu_id": "1.01.01",
+                    "measure": {
+                        "catalog_id": "000000002"
+                    },
+                    "currency": "RUB",
+                    "amount_vat": 75641.2,
+                    "service_id": [
+                        2,
+                        29,
+                        30
+                    ],
+                    "vat_applied": true,
+                    "vat_percent": 20,
+                    "amount_with_vat": 453847.2,
+                    "can_be_countable": false,
+                    "amount_without_vat": 378206.0,
+                    "price_per_unit_with_vat": 453847.2,
+                    "price_per_unit_without_vat": 378206.0
+                }
+            ],
+            "datetime_created": "2024-12-26T11:37:33",
+            "negative_services": [
+                {
+                    "id": 33,
+                    "special_service_id": "TRCONT.1_02_04-PRB-OFF",
+                    "is_accessorial_code": false,
+                    "special_service_duration": null
+                }
+            ],
+            "container_train_tk": null,
+            "items_total_weight": 20.0,
+            "items_declared_value": {
+                "cost": 7000000,
+                "currency": "RUB"
+            }
+        },
+        "comment_for_processing": null
+    }
+}
